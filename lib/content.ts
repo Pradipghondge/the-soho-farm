@@ -29,7 +29,7 @@ export const highlights = [
   "Helicopter Site Visit Available"
 ];
 
-export const overview = [
+export const overview: [string, string][] = [
   ["Project Name", "The Soho Farm"],
   ["Project Size", "100 Acres"],
   ["Project Type", "Premium Agricultural Land"],
