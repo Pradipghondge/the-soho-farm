@@ -97,7 +97,7 @@ export const whoShouldBuy = [
   "NRI Investors"
 ];
 
-export const testimonials = [
+export const testimonials: [string, string][] = [
   ["Amazing mountain views and premium infrastructure.", "Investor visitor"],
   ["Perfect destination for a future farmhouse.", "Weekend home buyer"],
   ["The view alone convinced us to invest.", "Land investor"]
