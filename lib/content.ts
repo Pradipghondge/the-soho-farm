@@ -66,7 +66,7 @@ export const locationAdvantages = [
   "Easy Connectivity Through Major Road Networks"
 ];
 
-export const attractions = [
+export const attractions: [string, string][] = [
   ["Alibaug Beach", "/creatives/nearby-alibaug-beach.jpg"],
   ["Kashid Beach", "/creatives/nearby-kashid-beach.jpg"],
   ["Murud Janjira Fort", "/creatives/nearby-murud-janjira.jpg"],
