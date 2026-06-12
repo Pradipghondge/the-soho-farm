@@ -7,8 +7,8 @@ export const contact = {
 };
 
 export const projectStats = [
-  { value: "100", label: "acre premium development" },
-  { value: "360°", label: "mountain and valley views" },
+  { value: "100", label: "acre open green retreat" },
+  { value: "360°", label: "mountain, forest and valley views" },
   { value: "20,000", label: "sq.ft. minimum plot size" },
   { value: "₹150", label: "per sq.ft. pre-launch price" }
 ];
@@ -17,6 +17,16 @@ export const highlights = [
   "100 Acre Premium Development",
   "Premium Hilltop Location",
   "360° Mountain Views",
+  "Pollution-Free Environment",
+  "Fresh, Oxygen-Rich Air",
+  "Dense Forest And Jungle Landscape",
+  "Vast Open Spaces And Natural Privacy",
+  "Cool Natural Breeze Throughout The Year",
+  "Stress-Free Lifestyle Away From City Chaos",
+  "Close To Alibaug, Kashid And Coastal Attractions",
+  "Perfect Balance Of Hills, Forests And Beaches",
+  "Ideal For Weekend Homes And Farmhouse Living",
+  "A Destination Where Nature Meets Luxury",
   "Gated Community",
   "Fully Fenced Project",
   "Grand Entrance Gate",
@@ -30,37 +40,44 @@ export const highlights = [
 ];
 
 export const overview: [string, string][] = [
-  ["Project Name", "The Soho Farm"],
+  ["Project Name", "The Soho Farms"],
   ["Project Size", "100 Acres"],
   ["Project Type", "Premium Agricultural Land"],
   ["Location", "Roha - Alibaug Region"],
-  ["Location Type", "Hilltop Destination"],
-  ["View", "360° Mountain View"],
+  ["Location Type", "Emerging Hilltop Nature Destination"],
+  ["Lifestyle", "Mahabaleshwar-Lonavala Inspired Green Retreat"],
+  ["View", "360° Mountain, Jungle And Valley View"],
   ["Minimum Plot Size", "20,000 Sq.Ft."],
   ["Pre Launch Price", "₹150 Per Sq.Ft."],
   ["Ownership", "Freehold Agricultural Land"]
 ];
 
 export const amenities = [
-  "Grand Entrance Gate",
-  "Fully Fenced Project Boundary",
-  "Internal Roads Ready",
-  "Road Street Lights Installed",
-  "Water Facility Available",
-  "Electricity Available",
-  "Existing Tree Plantation",
-  "Plot Demarcation Completed",
-  "Hilltop Viewing Points",
-  "Open Green Spaces",
-  "Dedicated Access Roads",
-  "Secure Environment"
+  "Nature Walking Trails",
+  "Forest Experience Zones",
+  "Hilltop Viewing Decks",
+  "Sunrise And Sunset Points",
+  "Open Green Lawns",
+  "Family Picnic Areas",
+  "Meditation And Relaxation Zones",
+  "Photography Points",
+  "Valley View Sitting Areas",
+  "Weekend Leisure Spaces",
+  "Pollution-Free Green Surroundings",
+  "Beach Proximity Through Alibaug Belt"
 ];
 
 export const locationAdvantages = [
-  "Mumbai - 110 to 130 Km",
-  "Navi Mumbai - 85 to 100 Km",
-  "Panvel - 70 to 85 Km",
-  "Pune - 120 to 140 Km",
+  "Now We Are Entering Roha - A Destination Where Nature Still Feels Untouched",
+  "Mahabaleshwar And Lonavala Feeling With Larger Open Spaces",
+  "Lower Population Density And A More Peaceful Lifestyle",
+  "Perfect Balance Of Hills, Forests And Beaches",
+  "Close To Alibaug, Kashid And Coastal Attractions",
+  "Ideal For Weekend Homes, Farmhouse Living And Long-Term Holding",
+  "Mumbai - 90 to 95 Km",
+  "Navi Mumbai - 80 to 85 Km",
+  "Panvel - 70 to 75 Km",
+  "Pune - 100 to 110 Km",
   "Roha Railway Station Nearby",
   "Kolad Railway Station Nearby",
   "Easy Connectivity Through Major Road Networks"
@@ -76,6 +93,13 @@ export const attractions: [string, string][] = [
 ];
 
 export const benefits = [
+  "Roha Is Emerging As A Preferred Nature Destination",
+  "Pollution-Free Green Retreat Lifestyle",
+  "Fresh Air, Open Space And High Oxygen Living",
+  "Near Beach And Sahyadri Recreation Belt",
+  "Stress-Free Lifestyle Away From City Chaos",
+  "A Destination Where Nature Meets Luxury",
+  "Ideal Weekend Home And Farmhouse Living Belt",
   "Limited Supply Of Hilltop Land",
   "Strong Future Appreciation",
   "Growing Demand For Farmhouses",
@@ -94,19 +118,25 @@ export const whoShouldBuy = [
   "Weekend Home Buyers",
   "Long-Term Land Investors",
   "Retirement Lifestyle Buyers",
-  "NRI Investors"
+  "NRI Investors",
+  "Nature Lovers",
+  "Recreation-Focused Families"
 ];
 
 export const testimonials: [string, string][] = [
-  ["Amazing mountain views and premium infrastructure.", "Investor visitor"],
-  ["Perfect destination for a future farmhouse.", "Weekend home buyer"],
-  ["The view alone convinced us to invest.", "Land investor"]
+  ["It feels like a quiet hill-station escape with fresh air and open views.", "Rohit Patil, Mumbai"],
+  ["Perfect for weekend recreation, greenery and a future farmhouse.", "Tejas Deshmukh, Pune"],
+  ["Roha feels like it is just entering its next growth chapter.", "Anjali Sharma, Navi Mumbai"],
 ];
 
 export const finalUspList = [
   "100 Acre Premium Development",
   "Premium Gated Community",
   "360° Mountain Views",
+  "Fresh Air And High Oxygen Living",
+  "Pollution-Free Green Environment",
+  "Jungle And Valley Views",
+  "Beach Proximity",
   "Hilltop Location",
   "Roha Valley View",
   "Fully Fenced Project",
@@ -118,6 +148,21 @@ export const finalUspList = [
   "Helicopter Site Visit Available",
   "Minimum Plot Size 20,000 Sq.Ft.",
   "Pre-Launch Price ₹150 Per Sq.Ft."
+];
+
+export const retreatPillars = [
+  "Pollution-free environment",
+  "Fresh, oxygen-rich air",
+  "Surrounded by lush greenery",
+  "Dense forest and jungle landscape",
+  "Vast open spaces and natural privacy",
+  "Beautiful mountain and valley views",
+  "Cool natural breeze throughout the year",
+  "Stress-free lifestyle away from city chaos",
+  "Close to Alibaug, Kashid and coastal attractions",
+  "Perfect balance of hills, forests and beaches",
+  "Ideal for weekend homes and farmhouse living",
+  "A destination where nature meets luxury"
 ];
 
 export const creativePrompts = [

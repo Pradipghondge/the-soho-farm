@@ -2,12 +2,12 @@ import {
   amenities,
   attractions,
   benefits,
-  creativePrompts,
   finalUspList,
   highlights,
   locationAdvantages,
   overview,
   projectStats,
+  retreatPillars,
   testimonials,
   whoShouldBuy
 } from "@/lib/content";
@@ -15,7 +15,6 @@ import {
   AmenityGrid,
   BrandStory,
   ContactFooter,
-  CreativePromptPanel,
   ExperienceView,
   FinalCta,
   FloatingActions,
@@ -27,6 +26,7 @@ import {
   InvestmentBenefits,
   LocationSection,
   MasterPlan,
+  NatureRetreat,
   OverviewTable,
   ProjectHighlights,
   Testimonials,
@@ -43,6 +43,7 @@ export default function Home() {
       <BrandStory />
       <ProjectHighlights items={highlights} />
       <ExperienceView />
+      <NatureRetreat items={retreatPillars} />
       <OverviewTable items={overview} />
       <AmenityGrid items={amenities} />
       <LocationSection advantages={locationAdvantages} />
@@ -54,7 +55,6 @@ export default function Home() {
       <HelicopterExperience />
       <FormsSection />
       <FinalCta items={finalUspList} />
-      <CreativePromptPanel prompts={creativePrompts} />
       <ContactFooter />
       <FloatingActions />
     </main>

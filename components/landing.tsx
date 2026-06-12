@@ -34,7 +34,7 @@ function MediaBlock({
       role="img"
       aria-label={alt}
       style={{
-        backgroundImage: `linear-gradient(135deg, rgba(19, 43, 32, 0.22), rgba(8, 11, 10, 0.34)), url("${src}")`
+        backgroundImage: `linear-gradient(135deg, rgba(19, 43, 32, 0.16), rgba(8, 11, 10, 0.26)), url("${src}")`
       }}
     />
   );
@@ -43,14 +43,14 @@ function MediaBlock({
 export function Header() {
   return (
     <header className="site-header">
-      <a className="logo" href="#top" aria-label="The Soho Farm home">
+      <a className="logo" href="#top" aria-label="The Soho Farms home">
         <strong>THE</strong>
         <strong>SOHO</strong>
-        <strong>FARM</strong>
+        <strong>FARMS</strong>
       </a>
       <nav aria-label="Primary navigation">
         <a href="#overview">Overview</a>
-        <a href="#amenities">Amenities</a>
+        <a href="#amenities">Lifestyle</a>
         <a href="#investment">Investment Edge</a>
         <a href="#forms">Enquire</a>
       </nav>
@@ -77,11 +77,12 @@ export function Hero({ stats }: { stats: { value: string; label: string }[] }) {
       <div className="hero-overlay" />
       <div className="hero-content">
         <p className="badge">Exclusive Helicopter Site Visit Available</p>
-        <h1>THE SOHO FARM</h1>
+        <h1>THE SOHO FARMS</h1>
         <h2>Own The View. Own The Legacy.</h2>
         <p>
           100 Acre Premium Gated Community Agricultural Land in the Roha -
-          Alibaug Region, Raigad. Pre-launch offer starting at ₹150 per sq.ft.
+          Alibaug Region, Raigad. A hill-station inspired green retreat with
+          jungle views, fresh air, open spaces and beach access nearby.
         </p>
         <div className="hero-actions">
           <a href="#forms">Book Site Visit</a>
@@ -105,16 +106,17 @@ export function WelcomeSection() {
   return (
     <section className="split-section">
       <div>
-        <SectionTitle eyebrow="Welcome" title="Welcome To The Soho Farm" />
+        <SectionTitle eyebrow="Welcome" title="Welcome To The Soho Farms" />
         <p>
           A rare opportunity to own premium hilltop agricultural land amidst the
-          breathtaking Sahyadri mountain ranges.
+          breathtaking Sahyadri mountain ranges, dense greenery and open skies.
         </p>
         <p>
-          Spread across 100 acres, The Soho Farm brings together nature,
-          infrastructure, exclusivity and long-term investment potential. More
-          than land ownership, it is an opportunity to own a lifestyle
-          destination.
+          Spread across 100 acres, The Soho Farms brings together nature,
+          infrastructure, recreation and long-term investment potential. More
+          than land ownership, it is an opportunity to own a peaceful weekend
+          destination that feels close to Mahabaleshwar, Lonavala and the
+          Alibaug coastal belt.
         </p>
         <a className="gold-link" href="#overview">
           Explore Project
@@ -133,14 +135,14 @@ export function BrandStory() {
         alt="Luxury farm lifestyle"
       />
       <div>
-        <SectionTitle eyebrow="Why The Soho Farm?" title="Where Luxury Meets Nature" />
+        <SectionTitle eyebrow="Why The Soho Farms?" title="Where Luxury Meets Nature" />
         <p>
           Soho represents sophistication, exclusivity and premium living. Farm
-          represents freedom, nature and true ownership.
+          represents freedom, fresh air, nature and true ownership.
         </p>
         <p>
-          Together, The Soho Farm creates a destination where investment meets
-          lifestyle.
+          Together, The Soho Farms creates a destination where investment meets a
+          pollution-free nature retreat lifestyle.
         </p>
         <strong>Above The Ordinary.</strong>
       </div>
@@ -176,12 +178,49 @@ export function ExperienceView() {
         <SectionTitle title="Every Plot Comes With A View" />
         <p>
           Experience breathtaking sunrises, panoramic mountain landscapes, cool
-          hilltop breeze, natural privacy and the complete 100-acre development
-          from the ground as well as from the sky.
+          hilltop breeze, natural privacy, high-oxygen fresh air and the
+          complete 100-acre development from the ground as well as from the sky.
         </p>
         <a className="gold-link" href="#forms">
           Schedule Site Visit
         </a>
+      </div>
+    </section>
+  );
+}
+
+export function NatureRetreat({ items }: { items: string[] }) {
+  return (
+    <section className="retreat-section">
+      <div>
+        <p className="badge">Now We Are Entering Roha</p>
+        <SectionTitle title="Why Roha?" />
+        <p>
+          A destination where nature still feels untouched. Roha gives you the
+          feeling of Mahabaleshwar and Lonavala, but with larger open spaces,
+          lower population density and a more peaceful lifestyle.
+        </p>
+        <p>
+          Wake up to birdsong instead of traffic. Breathe fresh air instead of
+          pollution. Enjoy endless greenery instead of concrete buildings. Roha
+          is not just a location. It is a lifestyle upgrade.
+        </p>
+        <ul className="check-list retreat-list">
+          {items.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+        <blockquote>
+          When the city becomes too loud, Roha brings you back to nature.
+        </blockquote>
+        <a className="gold-link" href="#forms">
+          Book Site Visit
+        </a>
+      </div>
+      <div className="retreat-gallery" aria-label="Nature retreat visuals">
+        <MediaBlock src="/creatives/experience-panoramic-view.jpg" alt="Green valley landscape" />
+        <MediaBlock src="/creatives/welcome-hilltop.jpg" alt="Open hilltop landscape" />
+        <MediaBlock src="/creatives/nearby-sahyadri-valleys.jpg" alt="Sahyadri forest valleys" />
       </div>
     </section>
   );
@@ -207,8 +246,8 @@ export function AmenityGrid({ items }: { items: string[] }) {
   return (
     <section className="section-shell" id="amenities">
       <SectionTitle
-        eyebrow="Infrastructure"
-        title="Premium Infrastructure Already Available"
+        eyebrow="Recreation Areas"
+        title="Designed For Peaceful Weekend Living"
         align="center"
       />
       <div className="amenity-grid">
@@ -227,7 +266,7 @@ export function LocationSection({ advantages }: { advantages: string[] }) {
         <SectionTitle eyebrow="Project Location" title="Roha - Alibaug Region" />
         <div className="map-frame">
           <iframe
-            title="The Soho Farm map"
+            title="The Soho Farms map"
             src="https://maps.google.com/maps?q=18.4059715,73.1227036&z=15&output=embed"
             loading="lazy"
           />
@@ -242,7 +281,7 @@ export function LocationSection({ advantages }: { advantages: string[] }) {
         </div>
       </div>
       <div>
-        <SectionTitle title="Location Advantage" />
+        <SectionTitle title="Why Roha Is Becoming Preferred" />
         <ul className="check-list">
           {advantages.map((item) => (
             <li key={item}>{item}</li>
@@ -275,8 +314,9 @@ export function MasterPlan() {
       <div>
         <SectionTitle eyebrow="Planning" title="Master Plan & Layout" />
         <p>
-          Review the plotted land parcels, internal movement, green buffers and
-          access routes prepared for this 100-acre development.
+          Review plotted land parcels, internal movement, green buffers,
+          recreation spaces and access routes planned for this 100-acre nature
+          retreat development.
         </p>
         <div className="button-row">
           <a href="/creatives/master-plan.jpg" download>
@@ -295,7 +335,7 @@ export function MasterPlan() {
 export function InvestmentBenefits({ items }: { items: string[] }) {
   return (
     <section className="section-shell" id="investment">
-      <SectionTitle eyebrow="Investment Edge" title="Why Invest At The Soho Farm?" />
+      <SectionTitle eyebrow="Investment Edge" title="Why Invest In This Green Growth Belt?" />
       <div className="benefit-grid">
         {items.map((item) => (
           <article key={item}>
@@ -324,7 +364,7 @@ export function WhoShouldBuy({ items }: { items: string[] }) {
 export function Testimonials({ items }: { items: Pair[] }) {
   return (
     <section className="section-shell">
-      <SectionTitle eyebrow="Testimonials" title="What Our Visitors Say" />
+      <SectionTitle eyebrow="Customer Reviews" title="Actual Visitor Experiences" />
       <div className="testimonial-grid">
         {items.map(([quote, source]) => (
           <article key={quote}>
@@ -333,10 +373,6 @@ export function Testimonials({ items }: { items: Pair[] }) {
             <span>{source}</span>
           </article>
         ))}
-        <article className="video-card">
-          <span>Video Testimonial</span>
-          <strong>Placeholder</strong>
-        </article>
       </div>
     </section>
   );
@@ -354,10 +390,10 @@ export function HelicopterExperience() {
         <p className="badge">Exclusive Helicopter Site Visit Experience</p>
         <h2>ARRIVE ABOVE THE ORDINARY</h2>
         <p>
-          Experience The Soho Farm like never before. Selected visitors can
+          Experience The Soho Farms like never before. Selected visitors can
           witness the complete 100-acre development, Sahyadri mountain ranges,
-          green surroundings and panoramic valley views from a truly unique
-          perspective.
+          green surroundings, fresh air and panoramic valley views from a truly
+          unique perspective.
         </p>
         <ul className="check-list compact">
           <li>Helicopter Site Visit Available</li>
@@ -382,6 +418,24 @@ function TextInput({ label, type = "text" }: { label: string; type?: string }) {
   );
 }
 
+function SelectInput({ label, options }: { label: string; options: string[] }) {
+  return (
+    <label>
+      <span>{label}</span>
+      <select defaultValue="" required>
+        <option value="" disabled>
+          Select {label}
+        </option>
+        {options.map((option) => (
+          <option key={option} value={option}>
+            {option}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
+}
+
 export function FormsSection() {
   return (
     <section className="forms-section" id="forms">
@@ -400,7 +454,16 @@ export function FormsSection() {
           <TextInput label="Mobile Number" type="tel" />
           <TextInput label="Email" type="email" />
           <TextInput label="City" />
-          <TextInput label="Investment Budget" />
+          <SelectInput
+            label="Investment Budget"
+            options={[
+              "₹3 Lakhs - ₹4 Lakhs",
+              "₹4 Lakhs - ₹5 Lakhs",
+              "₹5 Lakhs - ₹7 Lakhs",
+              "₹7 Lakhs - ₹10 Lakhs",
+              "Above ₹10 Lakhs"
+            ]}
+          />
           <label>
             <span>Message</span>
             <textarea placeholder="Message" />
@@ -439,8 +502,8 @@ export function FormsSection() {
 export function FinalCta({ items }: { items: string[] }) {
   return (
     <section className="final-cta">
-      <SectionTitle title="THE SOHO FARM" align="center" />
-      <h3>Above The Ordinary. Own The View. Own The Legacy.</h3>
+      <SectionTitle title="THE SOHO FARMS" align="center" />
+      <h3>Above The Ordinary. Own Fresh Air, Open Views And A Green Legacy.</h3>
       <div className="final-list">
         {items.map((item) => (
           <span key={item}>{item}</span>
@@ -457,36 +520,12 @@ export function FinalCta({ items }: { items: string[] }) {
   );
 }
 
-export function CreativePromptPanel({
-  prompts
-}: {
-  prompts: { name: string; prompt: string }[];
-}) {
-  return (
-    <section className="section-shell creative-panel">
-      <SectionTitle eyebrow="Asset Guide" title="Creative Files To Place In Public" />
-      <p>
-        Put these generated assets inside <strong>public/creatives</strong>. The
-        page already references these names.
-      </p>
-      <div>
-        {prompts.map((item) => (
-          <article key={item.name}>
-            <h3>{item.name}</h3>
-            <p>{item.prompt}</p>
-          </article>
-        ))}
-      </div>
-    </section>
-  );
-}
-
 export function ContactFooter() {
   return (
     <footer>
       <div className="footer-grid">
         <div>
-          <h2>THE SOHO FARM</h2>
+          <h2>THE SOHO FARMS</h2>
           <p>Roha - Alibaug Region, Raigad</p>
           <p>Coordinates: 18.4059715, 73.1227036</p>
         </div>
