@@ -1,62 +1,39 @@
 import {
-  amenities,
   attractions,
-  benefits,
-  finalUspList,
-  highlights,
-  locationAdvantages,
-  overview,
-  projectStats,
-  retreatPillars,
-  testimonials,
-  whoShouldBuy
+  projectStats
 } from "@/lib/content";
 import {
-  AmenityGrid,
+  AboutSection,
   BrandStory,
   ContactFooter,
-  ExperienceView,
-  FinalCta,
-  FloatingActions,
-  FormsSection,
+  ContactSection,
   Header,
-  HelicopterExperience,
   Hero,
   ImageCarousel,
-  InvestmentBenefits,
+  ImageGallery,
   LocationSection,
-  MasterPlan,
-  NatureRetreat,
-  OverviewTable,
-  ProjectHighlights,
-  Testimonials,
-  WelcomeSection,
-  WhoShouldBuy
+  ScrollAnimator,
+  StatsSection,
+  TowerShowcaseSection
 } from "@/components/landing";
 
 export default function Home() {
   return (
     <main>
-      <Header />
-      <Hero stats={projectStats} />
-      <WelcomeSection />
-      <BrandStory />
-      <ProjectHighlights items={highlights} />
-      <ExperienceView />
-      <NatureRetreat items={retreatPillars} />
-      <OverviewTable items={overview} />
-      <AmenityGrid items={amenities} />
-      <LocationSection advantages={locationAdvantages} />
-      <ImageCarousel title="Nearby Attractions" items={attractions} />
-      <MasterPlan />
-      <InvestmentBenefits items={benefits} />
-      <WhoShouldBuy items={whoShouldBuy} />
-      <Testimonials items={testimonials} />
-      <HelicopterExperience />
-      <FormsSection />
-      <FinalCta items={finalUspList} />
+      <div className="scroll-wrapper">
+        <Header />
+        <Hero />
+        <AboutSection />
+        <BrandStory />
+        <ImageCarousel title="Nearby Attractions" items={attractions} />
+        <StatsSection stats={projectStats} />
+        <TowerShowcaseSection />
+        <ImageGallery />
+        <LocationSection />
+        <ContactSection />
+      </div>
       <ContactFooter />
-      <FloatingActions />
+      <ScrollAnimator />
     </main>
   );
 }
