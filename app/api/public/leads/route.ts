@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ success: true, data: lead }, { status: 201 });
   } catch (error) {
     console.error('API Error:', error);
-    if (error.name === 'ValidationError') {
+    if (error instanceof Error && error.name === 'ValidationError') {
       return NextResponse.json({ success: false, message: error.message }, { status: 400 });
     }
     return NextResponse.json({ success: false, message: 'Server Error' }, { status: 500 });

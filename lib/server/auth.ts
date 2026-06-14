@@ -2,8 +2,7 @@ import { SignJWT, jwtVerify } from 'jose';
 import { cookies } from 'next/headers';
 import { NextRequest, NextResponse } from 'next/server';
 
-console.log('Available ENV keys:', Object.keys(process.env)); // Advanced Debugging
-const secretKey = process.env.SESSION_SECRET;
+const secretKey = process.env.SESSION_SECRET || 'fallback-secret-for-dev-only';
 const key = new TextEncoder().encode(secretKey);
 
 export async function encrypt(payload: any) {
@@ -29,18 +28,21 @@ export async function createSession(userId: string) {
   const expires = new Date(Date.now() + 2 * 60 * 60 * 1000); // 2 hours
   const session = await encrypt({ userId, expires });
 
-  cookies().set('session', session, { expires, httpOnly: true });
+  const cookieStore = await cookies();
+  cookieStore.set('session', session, { expires, httpOnly: true });
 }
 
 export async function getSession() {
-  const sessionCookie = cookies().get('session')?.value;
+  const cookieStore = await cookies();
+  const sessionCookie = cookieStore.get('session')?.value;
   if (!sessionCookie) return null;
 
   return await decrypt(sessionCookie);
 }
 
 export async function deleteSession() {
-  cookies().set('session', '', { expires: new Date(0) });
+  const cookieStore = await cookies();
+  cookieStore.set('session', '', { expires: new Date(0) });
 }
 
 // This function can be called from a middleware to update the session cookie

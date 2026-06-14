@@ -2,6 +2,6 @@ import { NextResponse } from 'next/server';
 import { deleteSession } from '@/lib/server/auth';
 
 export async function POST() {
-    deleteSession();
+    await deleteSession();
     return NextResponse.json({ success: true }, { status: 200 });
 }

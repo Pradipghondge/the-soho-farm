@@ -51,7 +51,7 @@ export default function Dashboard() {
   }
 
   // Basic styles - will be improved later
-  const styles = {
+  const styles: { [key: string]: React.CSSProperties } = {
       container: { fontFamily: 'sans-serif', padding: '2rem' },
       header: { display: 'flex', justifyContent: 'space-between', alignItems: 'center' },
       table: { width: '100%', borderCollapse: 'collapse', marginTop: '2rem' },

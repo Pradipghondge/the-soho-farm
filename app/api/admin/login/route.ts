@@ -10,6 +10,11 @@ export async function POST(request: Request) {
     const adminEmail = process.env.ADMIN_EMAIL;
     const adminPassword = process.env.ADMIN_PASSWORD;
 
+    if (!adminEmail || !adminPassword) {
+      console.error('Missing admin credentials in environment variables');
+      return NextResponse.json({ success: false, message: 'Server configuration error' }, { status: 500 });
+    }
+
     if (email === adminEmail && password === adminPassword) {
       // Create a session for the admin user
       await createSession(adminEmail); // Using email as a simple user ID
